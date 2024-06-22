@@ -1,0 +1,212 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.menu {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Центрирование содержимого по горизонтали */
+  align-items: center;
+  position: relative;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center; /* Центрирование поиска */
+  align-items: center;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-right: 10px;
+  outline: none;
+  border: 2px solid transparent;
+}
+
+.search-input:hover {
+  border: 2px solid #42445A;
+}
+
+.search-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button i {
+  font-size: 1rem;
+}
+
+
+
+#noResults {
+  text-align: center;
+  color: #fff;
+  grid-column: 1 / -1; /* Чтобы сообщение занимало всю ширину контейнера */
+}
+
+#noResults img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.sponsor {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu h1 {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-input {
+    width: calc(100% - 40px); /* Оставляем место для кнопки поиска */
+  }
+
+  .search-button {
+    width: 30px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin-top: 15px;
+}
+
+.card {
+  background: #333;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.card button, .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+
+/* Sound HTML */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.PlaySound {
+  min-width: 100px;
+  min-height: 100px;
+  background: #333;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 4em;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#PlaySound {
+  margin: auto;
+}
+
+.playMusic {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn {
+  min-width: 200px;
+  margin: auto;
+  text-decoration: none;
+}
